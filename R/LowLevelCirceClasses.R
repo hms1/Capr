@@ -45,7 +45,8 @@
 # 4) Occurrence - the number of instances a query occurs
 # 5) Expression Type - boolean logic of counts
 
-#Despite specifying the subclasses in this section. They are elaborated in LowLevelSubClasses.R
+#Despite specifying the subclasses in this section. They are elaborated in LowLevelSubClasses.R and
+#in LowLevelAttributeClasses.R
 
 
 
@@ -61,6 +62,9 @@
 #' specifies all concepts used to specify the clinical construct. In Capr the codeset id is a guid that uniquely
 #' identifies a concept set expression in a component. Attributes are optional to a query as they modify the query
 #' to distinguish a subselection of observational events.
+#'
+#' To create a query class, use the query<Domain> commands and apply a concept set expression expression
+#' to attach to the query. You may also attach a list of attributes to add to the query.
 #'
 #' @slot Domain the domain where the concepts can be found
 #' @slot CodesetId the id that matches the concept set expression
