@@ -560,7 +560,7 @@ createPrimaryCriteria <- function(Name,
     stop("All inputs in a Component list must be of Component class")
   }
   cl <- lapply(ComponentList, function(x) x@CriteriaExpression[[1]])
-  cse <- unnest(lapply(ComponentList, function(x) x@ConceptSetExpression), recusrive = F)
+  cse <- unlist(lapply(ComponentList, function(x) x@ConceptSetExpression), recursive = F)
   pc <- createComponent(Name = Name,
                                 Description = Description,
                                 ComponentType = "PrimaryCriteria",
