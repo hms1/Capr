@@ -559,8 +559,8 @@ createPrimaryCriteria <- function(Name,
   if(!all(grepl("Component",check))){
     stop("All inputs in a Component list must be of Component class")
   }
-  cl <- lapply(ComponentList, function(x) x@CriteriaExpression[[1]])
-  cse <- lapply(ComponentList, function(x) x@ConceptSetExpression[[1]])
+  cl <- flatten(lapply(ComponentList, function(x) x@CriteriaExpression[[1]]))
+  cse <- flatten(lapply(ComponentList, function(x) x@ConceptSetExpression[[1]]))
   pc <- createComponent(Name = Name,
                                 Description = Description,
                                 ComponentType = "PrimaryCriteria",
