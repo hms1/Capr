@@ -198,7 +198,7 @@ setMethod("as.Circe", "ConceptSetExpression",
 #' @aliases as.Circe,OpAttribute-method
 setMethod('as.Circe', 'OpAttribute',
           function(x) {
-            if (x@Op != "bt" | x@Op != "!bt") {
+            if (x@Op != "bt" & x@Op != "!bt") {
               att <- list(list('Value' = x@Contents$Value,
                                'Op' = x@Op))
             } else{
